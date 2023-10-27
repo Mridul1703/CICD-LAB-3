@@ -11,6 +11,7 @@ public class MyCalss {
 	}
 
 	public static void main(String[] args) {		
+		System.out.println("Done");
 		MyCalss ob = new MyCalss();
 		ob.greeting();
 	}
