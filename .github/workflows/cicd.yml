@@ -18,9 +18,12 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Docker Build and Push
-      uses: mr-smithers-excellent/docker-build-push@v6
-      with:
-        image: hkshitesh/cicd
+      # uses: mr-smithers-excellent/docker-build-push@v6
+      run: 
+        docker build -t mriidul17/CICD-LAB-3:latest .
+        docker push mriidul17/CICD-LAB-3:latest
+      with: 
+        image: 
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
