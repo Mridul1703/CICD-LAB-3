@@ -19,9 +19,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Docker Build and Push
       uses: mr-smithers-excellent/docker-build-push@v6
-      run: 
-        docker build -t mriidul17/CICD-LAB-3:latest .
-        docker push mriidul17/CICD-LAB-3:latest
       with: 
         image: mriidul17/CICD-LAB-3:latest
         registry: docker.io
